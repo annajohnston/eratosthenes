@@ -1,0 +1,18 @@
+func eratos(bnd : Int) -> [Int]
+  {
+  var prime : [UInt8] = [UInt8](count : bnd, repeatedValue : 0)
+  var retPrimes : [Int] = []
+  for j in 2..<bnd
+    {
+    if prime[j] == 0 //j is prime!!
+      {
+      for k = (2*j); k < bnd; k += j
+        {
+        prime[j] = 1
+        }
+      retPrimes = j
+      }
+    }
+  return retPrimes
+  }
+  
